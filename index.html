@@ -1,19 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fjellguide</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="site-header">
+    <header>
+        <a href="index.html"><img src="images/LogoFjellguiden.png" alt="Fjellguide Logo" class="logo"></a>
         <div class="header-content">
-            <div class="brand">
-                <h1>Fjellguide</h1>
-                <h3>Din guide til Norges vakreste fjellområder</h3>
-            </div>
             <nav class="top-nav">
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
@@ -31,7 +27,8 @@
                 <div class="hero-overlay">
                     <div class="hero-inner">
                         <div class="hero-topline">59°N — Norges fjell siden 2010</div>
-                        <h1 class="hero-title">Inn i fjellet.<br><span class="accent">Trygt hjem.</span></h1>
+                        <h1 class="hero-title">Inn i fjellet.</h1>
+                        <h2 class="hero-subtitle">Trygt hjem.</h2>
                         <p class="hero-sub">Sertifiserte fjellguider tar deg med på Norges råeste ruter — fra eggeturer i Romsdal til isbre i Jotunheimen.</p>
 
                         <div class="hero-cta">
@@ -61,193 +58,69 @@
                 </div>
             </div>
         </section>
-
-        <section class="routes-section">
-            <div class="section-inner">
-                <div class="section-heading">
-                    <div>
-                        <div class="eyebrow">Utvalgte ruter</div>
-                        <h2>Velg din neste tur</h2>
-                    </div>
-                    <p class="section-intro">Fra familievennlige kystleder til krevende alpin-ruter — vi har noe for alle nivåer.</p>
-                </div>
-
-                <div class="routes-grid" id="routes-grid">
-                    <!-- Route cards will be rendered here by JavaScript -->
-                </div>
-
-                <!-- Modal for route details -->
-                <div id="route-modal" class="modal" aria-hidden="true">
-                    <div class="modal-backdrop" data-close></div>
-                    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-                        <button class="modal-close" data-close>⨯ Lukk</button>
-                        <div class="modal-grid">
-                            <div class="modal-media">
-                                <img src="" alt="">
-                            </div>
-                            <div class="modal-body">
-                                <h3 id="modal-title">Tittel</h3>
-                                <div class="muted modal-region">Region</div>
-                                <p class="modal-desc">Beskrivelse</p>
-
-                                <div class="modal-meta">
-                                    <div>
-                                        <div class="meta-label">Distanse</div>
-                                        <div class="meta-value modal-distance">—</div>
-                                    </div>
-                                    <div>
-                                        <div class="meta-label">Høyde</div>
-                                        <div class="meta-value modal-elevation">—</div>
-                                    </div>
-                                    <div>
-                                        <div class="meta-label">Varighet</div>
-                                        <div class="meta-value modal-duration">—</div>
-                                    </div>
-                                </div>
-
-                                <div class="modal-season muted">Sesong: <span class="modal-season-val">—</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="fjellområder">
             <h2>Fjellområder</h2>
-            <p>Sertifiserte fjellguider tar deg med på Norges råeste ruter — fra eggeturer i Romsdal til isbre i Jotunheimen.</p>
+            <div class="routes-grid">
+                <article class="route-card">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1603084612671-be628f06dc06?w=800&h=520&fit=crop&auto=format" alt="Besseggen-ryggen">
+                    </div>
+                    <div class="card-body">
+                        <h3>Besseggen-ryggen</h3>
+                        <p>Opplev Norges mest kjente fjelltur. Smal rygg mellom Gjende og Bessvatnet — turkis mot mørkeblå.</p>
+                        <div class="card-footer">
+                            <div class="season">Sesong: Jul–Sep</div>
+                        </div>
+                        <details class="route-details">
+                            <summary>Detaljer</summary>
+                            <div class="route-detail-row"><span class="detail-label">Navn:</span><span>Besseggen-ryggen</span></div>
+                            <div class="route-detail-row"><span class="detail-label">Region:</span><span>Jotunheimen</span></div>
+                            <div class="route-detail-row"><span class="detail-label">Vanskelighetsgrad:</span><span>Middels</span></div>
+                            <div class="route-detail-row"><span class="detail-label">Varighet:</span><span>6–8 timer</span></div>
+                            <div class="route-detail-row"><span class="detail-label">Høyde:</span><span>1743 moh</span></div>
+                            <div class="route-detail-row"><span class="detail-label">Distanse:</span><span>18 km</span></div>
+                            <div class="route-detail-row"><span class="detail-label">Sesong:</span><span>Jul–Sep</span></div>
+                            <div class="route-detail-row"><span class="detail-label">Beskrivelse:</span><span>Norges mest kjente fjelltur. Smal rygg mellom Gjende og Bessvatnet — turkis mot mørkeblå. Krever god kondisjon og stødig hode for høyder.</span></div>
+                        </details>
+                    </div>
+                </article>
+                <article class="route-card">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1518124880777-cf8c82231ffb?w=800&h=520&fit=crop&auto=format" alt="Romsdalseggen">
+                    </div>
+                    <div class="card-body">
+                        <h3>Romsdalseggen</h3>
+                        <p>Opplev bratte eggpartier og panoramautsikt i Romsdalsalpene.</p>
+                        <div class="card-footer">
+                            <div class="season">Sesong: Jun–Okt</div>
+                        </div>
+                        <details class="route-details">
+                            <summary>Detaljer</summary>
+                            <div class="route-detail-row"><span class="detail-label">Navn:</span><span>Romsdalseggen</span></div>
+                            <div class="route-detail-row"><span class="detail-label">Region:</span><span>Romsdal</span></div>
+                            <div class="route-detail-row"><span class="detail-label">Vanskelighetsgrad:</span><span>Krevende</span></div>
+                            <div class="route-detail-row"><span class="detail-label">Varighet:</span><span>7–9 timer</span></div>
+                            <div class="route-detail-row"><span class="detail-label">Høyde:</span><span>1550 moh</span></div>
+                            <div class="route-detail-row"><span class="detail-label">Distanse:</span><span>23 km</span></div>
+                            <div class="route-detail-row"><span class="detail-label">Sesong:</span><span>Jun–Okt</span></div>
+                            <div class="route-detail-row"><span class="detail-label">Beskrivelse:</span><span>En klassisk eggeture med panoramautsikt over Romsdalsfjorden og de spisse Romsdalsalpene. Bratt opp, teknisk passasje midt på ruta.</span></div>
+                        </details>
+                    </div>
+                </article>
+            </div>
         </section>
         <section id="turer">
             <h2>Turer</h2>
-            <p>Finn turer som passer for alle nivåer, fra nybegynnere til erfarne fjellklatrere.</p>
+            <p>Finn turer som passer for alle nivåer, fra enkle dagsturer til krevende flerdagsturer.</p>
         </section>
         <section id="kontakt">
             <h2>Kontakt</h2>
-            <p>Har du spørsmål eller ønsker å dele dine erfaringer? Kontakt oss!</p>
+            <p>Har du spørsmål eller ønsker å dele dine erfaringer? Kontakt oss gjerne!</p>
         </section>
     </main>
     <footer>
-        <p>&copy; 2026 Fjellguide. Alle rettigheter reservert.</p>
+        <p>&copy; 2024 Fjellguide. Alle rettigheter reservert.</p>
     </footer>
-        <script>
-                const ROUTES = [
-                    {
-                        id: 1,
-                        name: "Besseggen-ryggen",
-                        region: "Jotunheimen",
-                        difficulty: "Middels",
-                        duration: "6–8 timer",
-                        elevation: "1743 moh",
-                        distance: "18 km",
-                        season: "Jul–Sep",
-                        description:
-                            "Norges mest kjente fjelltur. Smal rygg mellom Gjende og Bessvatnet — turkis mot mørkeblå. Krever god kondisjon og stødig hode for høyder.",
-                        img: "https://images.unsplash.com/photo-1603084612671-be628f06dc06?w=800&h=520&fit=crop&auto=format",
-                    },
-                    {
-                        id: 2,
-                        name: "Romsdalseggen",
-                        region: "Romsdal",
-                        difficulty: "Krevende",
-                        duration: "7–9 timer",
-                        elevation: "1550 moh",
-                        distance: "23 km",
-                        season: "Jun–Okt",
-                        description:
-                            "En klassisk eggeture med panoramautsikt over Romsdalsfjorden og de spisse Romsdalsalpene. Bratt opp, teknisk passasje midt på ruta.",
-                        img: "https://images.unsplash.com/photo-1518124880777-cf8c82231ffb?w=800&h=520&fit=crop&auto=format",
-                    },
-                    {
-                        id: 3,
-                        name: "Preikestolen",
-                        region: "Rogaland",
-                        difficulty: "Lett",
-                        duration: "3–4 timer",
-                        elevation: "604 moh",
-                        distance: "8 km",
-                        season: "Hele året",
-                        description:
-                            "Ikonisk platå 604 meter over Lysefjorden. Godt merket sti med noe krevende passasjer. Imponerende utsikt — og trengsel om sommeren.",
-                        img: "https://images.unsplash.com/photo-1568376843280-2f6211bff966?w=800&h=520&fit=crop&auto=format",
-                    },
-                    {
-                        id: 4,
-                        name: "Galdhøpiggen",
-                        region: "Jotunheimen",
-                        difficulty: "Krevende",
-                        duration: "8–10 timer",
-                        elevation: "2469 moh",
-                        distance: "16 km",
-                        season: "Jun–Sep",
-                        description:
-                            "Norges og Nord-Europas høyeste topp. Via Svellnosen-ruta over bre — isøks og brodder kreves. Rå og urørt over tregrensa hele veien.",
-                        img: "https://images.unsplash.com/photo-1520900575852-d7f230066c2d?w=800&h=520&fit=crop&auto=format",
-                    },
-                ];
 
-                function renderRoutes() {
-                    const container = document.getElementById('routes-grid');
-                    if (!container) return;
-                    container.innerHTML = ROUTES.map(r => `
-                        <article class="route-card">
-                            <div class="card-media">
-                                <img src="${r.img}" alt="${r.name}">
-                                <span class="badge ${r.difficulty === 'Krevende' ? 'badge-danger' : r.difficulty === 'Lett' ? 'badge-easy' : ''}">${r.difficulty}</span>
-                            </div>
-                            <div class="card-body">
-                                <h3>${r.name}</h3>
-                                <div class="muted">${r.region}</div>
-                                <p>${r.description}</p>
-                                <div class="card-footer">
-                                    <div class="season">Sesong: ${r.season}</div>
-                                    <a class="details" href="#" data-id="${r.id}">Detaljer →</a>
-                                </div>
-                            </div>
-                        </article>
-                    `).join('');
-                    // attach click handler via delegation
-                    container.querySelectorAll('.details').forEach(a => a.addEventListener('click', e => {
-                        e.preventDefault();
-                        const id = parseInt(a.getAttribute('data-id'), 10);
-                        openRouteModal(id);
-                    }));
-                }
-
-                document.addEventListener('DOMContentLoaded', renderRoutes);
-
-                // Modal functions
-                const modal = document.getElementById('route-modal');
-                function openRouteModal(id) {
-                    const r = ROUTES.find(x => x.id === id);
-                    if (!r) return;
-                    modal.querySelector('.modal-media img').src = r.img;
-                    modal.querySelector('.modal-media img').alt = r.name;
-                    modal.querySelector('#modal-title').textContent = r.name;
-                    modal.querySelector('.modal-region').textContent = r.region;
-                    modal.querySelector('.modal-desc').textContent = r.description;
-                    modal.querySelector('.modal-distance').textContent = r.distance;
-                    modal.querySelector('.modal-elevation').textContent = r.elevation;
-                    modal.querySelector('.modal-duration').textContent = r.duration;
-                    modal.querySelector('.modal-season-val').textContent = r.season;
-                    modal.setAttribute('aria-hidden', 'false');
-                    document.body.classList.add('modal-open');
-                }
-
-                function closeRouteModal() {
-                    modal.setAttribute('aria-hidden', 'true');
-                    document.body.classList.remove('modal-open');
-                }
-
-                // close on backdrop or close button
-                modal.addEventListener('click', (e) => {
-                    if (e.target.closest('[data-close]')) closeRouteModal();
-                });
-
-                // close on Esc
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape' && document.body.classList.contains('modal-open')) closeRouteModal();
-                });
-        </script>
 </body>
 </html>
-
