@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fjellguide</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <a href="index.html"><img src="images/LogoFjellguiden.png" alt="Fjellguide Logo" class="logo"></a>
         <div class="header-content">
-            <nav class="top-nav">
-                <ul>
-                    <li><a href="index.html">Hjem</a></li>
+            <nav class="navbar top-nav">                
+                <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle meny">
+                <label for="menu-toggle" class="hamburger" aria-label="Åpne meny" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </label>
+
+                <ul class="nav-menu">
+                    <li><a href="#home">Hjem</a></li>
                     <li><a href="#fjellområder">Fjellområder</a></li>
                     <li><a href="#turer">Turer</a></li>
                     <li><a href="#kontakt">Kontakt</a></li>
@@ -23,7 +30,13 @@
     <main>
         <section class="hero-section">
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1775384354534-28cd63373a40?w=1600&h=900&fit=crop&auto=format" alt="Fjellandskap">
+                <img src="images/FjellguidenBakrunnsbilde.webp" 
+                    alt="Fjellandskap"
+                    srcset="
+                        images/FjellguidenBakrunnsbilde1200x800.webp
+                        
+                    "
+                    sizes="(max-width: 600px) 100vw, (min-width: 900px) 80vw, 50vw">
                 <div class="hero-overlay">
                     <div class="hero-inner">
                         <div class="hero-topline">59°N — Norges fjell siden 2010</div>
