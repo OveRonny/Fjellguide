@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fjellguide</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
@@ -45,8 +45,12 @@
                         <p class="hero-sub">Sertifiserte fjellguider tar deg med på Norges råeste ruter — fra eggeturer i Romsdal til isbre i Jotunheimen.</p>
 
                         <div class="hero-cta">
-                            <a class="btn btn-primary" href="#turer">Se alle turer</a>
-                            <a class="btn btn-outline" href="#kontakt">Bestill guide</a>
+                            <div class="btn-primary-container">
+                                <a class="btn btn-primary" href="#turer">Se alle turer</a>
+                            </div>                           
+                            <div class="btn-outline-container">
+                                <a class="btn btn-outline" href="#kontakt">Bestill guide</a>
+                            </div>
                         </div>
 
                         <div class="hero-stats">
@@ -76,50 +80,53 @@
             <div class="routes-grid">
                 <article class="route-card">
                     <div class="card-media">
-                        <img src="https://images.unsplash.com/photo-1603084612671-be628f06dc06?w=800&h=520&fit=crop&auto=format" alt="Besseggen-ryggen">
+                        <img src="images/Besseggen-ryggen.avif" alt="Besseggen">
+                        <span class="difficulty-badge krevende">Krevende</span> 
                     </div>
                     <div class="card-body">
-                        <h3>Besseggen-ryggen</h3>
-                        <p>Opplev Norges mest kjente fjelltur. Smal rygg mellom Gjende og Bessvatnet — turkis mot mørkeblå.</p>
-                        <div class="card-footer">
-                            <div class="season">Sesong: Jul–Sep</div>
+                        <div class="card-header">
+                            <h3 class="card-title">Besseggen</h3>
+                            <h5 class="card-subtitle">Jotunheimen</h5>
                         </div>
-                        <details class="route-details">
-                            <summary>Detaljer</summary>
-                            <div class="route-detail-row"><span class="detail-label">Navn:</span><span>Besseggen-ryggen</span></div>
-                            <div class="route-detail-row"><span class="detail-label">Region:</span><span>Jotunheimen</span></div>
-                            <div class="route-detail-row"><span class="detail-label">Vanskelighetsgrad:</span><span>Middels</span></div>
-                            <div class="route-detail-row"><span class="detail-label">Varighet:</span><span>6–8 timer</span></div>
-                            <div class="route-detail-row"><span class="detail-label">Høyde:</span><span>1743 moh</span></div>
-                            <div class="route-detail-row"><span class="detail-label">Distanse:</span><span>18 km</span></div>
-                            <div class="route-detail-row"><span class="detail-label">Sesong:</span><span>Jul–Sep</span></div>
-                            <div class="route-detail-row"><span class="detail-label">Beskrivelse:</span><span>Norges mest kjente fjelltur. Smal rygg mellom Gjende og Bessvatnet — turkis mot mørkeblå. Krever god kondisjon og stødig hode for høyder.</span></div>
-                        </details>
+                        <p>Norges mest kjente fjelltur. Smal rygg mellom Gjende og Bessvatnet — turkis mot mørkeblå. Krever god kondisjon og stødig hode for høyder.</p>
+                        <div class="card-footer">
+                            <div class="season">Sesong: Jul-Sep</div>
+                        
+                            <div class="route-details">  
+                        
+                                <div class="accordion-header" onclick="toggleAccordion(this)">
+                                    Detaljer                            
+                                    <span class="arrow">▼</span> 
+                                </div>
+                                
+                                <div class="accordion-content">                           
+                                    <div class="detail-stats-grid">
+                                        <div class="stat-item">
+                                            <span class="detail-label">Varighet</span>
+                                            <span class="detail-value">6–8 timer</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span class="detail-label">Høyde</span>
+                                            <span class="detail-value">1743 moh</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span class="detail-label">Distanse</span>
+                                            <span class="detail-value">18 km</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Bunnen: Beskrivelse som tar hele bredden -->
+                                    <div class="detail-description">
+                                        <span class="detail-label">Beskrivelse:</span>
+                                        <p>Norges mest kjente fjelltur. Smal rygg mellom Gjende og Bessvatnet — turkis mot mørkeblå. Krever god kondisjon og stødig hode for høyder.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </article>
-                <article class="route-card">
-                    <div class="card-media">
-                        <img src="https://images.unsplash.com/photo-1518124880777-cf8c82231ffb?w=800&h=520&fit=crop&auto=format" alt="Romsdalseggen">
-                    </div>
-                    <div class="card-body">
-                        <h3>Romsdalseggen</h3>
-                        <p>Opplev bratte eggpartier og panoramautsikt i Romsdalsalpene.</p>
-                        <div class="card-footer">
-                            <div class="season">Sesong: Jun–Okt</div>
-                        </div>
-                        <details class="route-details">
-                            <summary>Detaljer</summary>
-                            <div class="route-detail-row"><span class="detail-label">Navn:</span><span>Romsdalseggen</span></div>
-                            <div class="route-detail-row"><span class="detail-label">Region:</span><span>Romsdal</span></div>
-                            <div class="route-detail-row"><span class="detail-label">Vanskelighetsgrad:</span><span>Krevende</span></div>
-                            <div class="route-detail-row"><span class="detail-label">Varighet:</span><span>7–9 timer</span></div>
-                            <div class="route-detail-row"><span class="detail-label">Høyde:</span><span>1550 moh</span></div>
-                            <div class="route-detail-row"><span class="detail-label">Distanse:</span><span>23 km</span></div>
-                            <div class="route-detail-row"><span class="detail-label">Sesong:</span><span>Jun–Okt</span></div>
-                            <div class="route-detail-row"><span class="detail-label">Beskrivelse:</span><span>En klassisk eggeture med panoramautsikt over Romsdalsfjorden og de spisse Romsdalsalpene. Bratt opp, teknisk passasje midt på ruta.</span></div>
-                        </details>
-                    </div>
-                </article>
+            
             </div>
         </section>
         <section id="turer">
