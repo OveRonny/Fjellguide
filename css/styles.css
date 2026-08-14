@@ -281,11 +281,37 @@ body.menu-open {
   font-size: 1rem;
 }
 
+.fjell-section {
+  display: flex;             
+  justify-content: space-between; 
+  align-items: center;       
+  flex-wrap: wrap;           
+  gap: 2rem;                 
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+}
+
+
+
+.fjell-header {
+  display: flex;
+  justify-content: start;
+  margin-left: 2rem;  
+  font-size: 1.5rem;
+}
+
+.topline-fjell {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  color: #f59e0b;
+  font-size: 1.5rem;
+}
+
 .routes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 1em;
-  margin: 1rem;
+  gap: 2rem;
+  margin: 2rem;
 }
 
 .route-card {
