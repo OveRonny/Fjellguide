@@ -304,7 +304,7 @@
         <div class="trips-grid">
           <article class="guide-card">
             <figure class="guide-media">
-              <img src="images/photo-1586022045497-31fcf76fa6cc.avif" />
+              <img src="images/photo-1502126324834-38f8e02d7160.avif" />
             </figure>
             <div class="card-body">
               <header class="card-header">
@@ -316,22 +316,48 @@
                 2000-meterstopper.
               </p>
             </div>
+            <footer class="card-footer__stats">
+              <dl class="card-footer__stat-list">
+                <div class="card-footer__stat-item">
+                  <dt class="card-footer__label">ERFARING</dt>
+                  <dd class="card-footer__value">14 år</dd>
+                </div>
+
+                <div class="card-footer__stat-item">
+                  <dt class="card-footer__label">SPESIALITET</dt>
+                  <dd class="card-footer__value">Isbre og vinterklatring</dd>
+                </div>
+              </dl>
+            </footer>
           </article>
 
           <article class="guide-card">
             <figure class="guide-media">
-              <img src="images/photo-1586022045497-31fcf76fa6cc.avif" />
+              <img src="images/photo-1597250861267-429663f244a8.avif" />
             </figure>
             <div class="card-body">
               <header class="card-header">
-                <h3 class="card-title">Erik Halvorsen</h3>
-                <span class="card-subtitle">IFMGA Fjellguide</span>
+                <h3 class="card-title">Marte Solberg</h3>
+                <span class="card-subtitle">NF Tindevegleder</span>
               </header>
               <p>
-                Vokste opp i Romsdal, har ledet turer på samtlige norske
-                2000-meterstopper.
+                Spesialisert på fjellklatring i Lofoten og Jotunheimen.
+                Lidenskapelig opplærer.
               </p>
             </div>
+            <footer class="card-footer__stats">
+              <dl class="card-footer__stat-list">
+                <div class="card-footer__stat-item">
+                  <dt class="card-footer__label">ERFARING</dt>
+                  <dd class="card-footer__value">9 år</dd>
+                </div>
+
+                <div class="card-footer__stat-item">
+                  <dt class="card-footer__label">SPESIALITET</dt>
+                  <dd class="card-footer__value">Klatring & via ferrata</dd>
+                </div>
+              </dl>
+            </footer>
           </article>
           <article class="guide-card">
             <figure class="guide-media">
@@ -339,24 +365,113 @@
             </figure>
             <div class="card-body">
               <header class="card-header">
-                <h3 class="card-title">Erik Halvorsen</h3>
-                <span class="card-subtitle">IFMGA Fjellguide</span>
+                <h3 class="card-title">Jonas Vik</h3>
+                <span class="card-subtitle">DNT Turlederkurs II</span>
               </header>
               <p>
-                Vokste opp i Romsdal, har ledet turer på samtlige norske
-                2000-meterstopper.
+                Ekspert på lavfjell og fjordlandskap. Kjent for grundige
+                sikkerhetsbriefinger.
               </p>
             </div>
+            <footer class="card-footer__stats">
+              <dl class="card-footer__stat-list">
+                <div class="card-footer__stat-item">
+                  <dt class="card-footer__label">ERFARING</dt>
+                  <dd class="card-footer__value">6 år</dd>
+                </div>
+
+                <div class="card-footer__stat-item">
+                  <dt class="card-footer__label">SPESIALITET</dt>
+                  <dd class="card-footer__value">Fotturer & natur</dd>
+                </div>
+              </dl>
+            </footer>
           </article>
         </div>
-    
       </section>
-      <section id="kontakt">
-        <h2>Kontakt</h2>
-        <p>
-          Har du spørsmål eller ønsker å dele dine erfaringer? Kontakt oss
-          gjerne!
-        </p>
+      <section id="kontakt" class="contact">
+        <article class="booking-container">
+          <div class="booking-info">
+            <h3>Bestill din tur</h3>
+            <p>Klar for fjellet?</p>
+            <p>Fyll ut skjemaet, så tar vi kontakt innen 24 timer</p>
+            <p>med tilgjengelighet, priser og praktisk info.</p>
+            <ul class="booking-list">
+              <li>Møter kl 7.00 ved angitt startpunkt</li>
+              <li>Utstyrliste sendes etter bekreftelse</li>
+              <li>Betaling ved faktura -- 50% forskudd</li>
+              <li><strong>+47 412 00 000</strong> for akutte hendelser</li>
+            </ul>
+          </div>
+
+          <form class="booking-form" action="#" method="post">
+            <div class="form-group">
+              <label for="name">Navn</label>
+              <input id="name" type="text" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Epost</label>
+              <input id="email" type="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Telefon</label>
+              <input id="phone" type="tel" pattern="[0-9]{8}" required />
+            </div>
+
+          
+
+            <div class="form-group">
+              <label for="people">Antall personer</label>
+              <input id="people" type="number" />
+            </div>
+
+            <div class="form-group">
+              <label for="trip">Tur</label>
+              <select id="trip" name="trip">
+                <option value="" disabled selected>Velg en tur...</option>
+                <option value="isbre-tour">Isbre-guidet tur</option>
+                <option value="winter-climbing">Vinterklatring</option>
+                <option value="peak-bagging">Toppstigning (Alpint)</option>
+                <option value="custom">Egen forespørsel</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="date">Dato og tid</label>
+              <input id="date" type="date" />
+            </div>
+
+            <div class="form-group form-group--full-width">
+              <label for="message">Melding</label>
+              <textarea id="message" rows="4"></textarea>
+            </div>
+
+              <fieldset>
+              <legend>Velg turtype</legend>
+
+              <input
+                type="radio"
+                id="familie"
+                name="turtype"
+                value="familie"
+                checked
+              />
+              <label for="familie">Familie</label>
+
+              <input type="radio" id="fjell" name="turtype" value="fjell" />
+              <label for="fjell">Fjelltur</label>
+            </fieldset>
+
+            <div class="form-group">
+              <input type="checkbox" id="nyhetsbrev" name="nyhetsbrev" />
+              <label for="nyhetsbrev">Jeg ønsker nyhetsbrev</label>
+            </div>
+
+            <button type="submit" class="btn-submit">Send forespørsel</button>
+          </form>
+        </article>
       </section>
     </main>
     <footer>
